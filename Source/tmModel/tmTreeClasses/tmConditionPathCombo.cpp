@@ -65,7 +65,7 @@ void tmConditionPathCombo::SetPath(tmPath* aPath)
 {
   TMASSERT(aPath);
   TMASSERT(aPath->mIsLeafPath);
-  if (mPath = aPath) return;
+  if (mPath == aPath) return;
   tmTreeCleaner tc(mTree);
   mPath = aPath;
   mNode1 = aPath->mNodes.front();
