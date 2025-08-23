@@ -777,7 +777,7 @@ void tmTree::AbsorbEdge(tmEdge* aEdge)
     // Paths that end on killNode are deleted.
     if (thePath->StartsOrEndsWith(killNode))
       delete thePath;
-    else if (thePath->mNodes.contains(killNode))
+    else if (thePath->mNodes.contains(killNode)) {
       if (thePath->mNodes.contains(keepNode))
         // Paths that contain killNode and keepNode get the reference to 
         // killNode removed. 
@@ -786,6 +786,7 @@ void tmTree::AbsorbEdge(tmEdge* aEdge)
         // Paths that only contain killNode get the reference replaced by
         // a reference to keepNode.
         thePath->mNodes.replace_with(killNode, keepNode);
+    }
     // Remove the edge from the path
     if (thePath->mEdges.contains(aEdge))
       thePath->mEdges.erase_remove(aEdge);

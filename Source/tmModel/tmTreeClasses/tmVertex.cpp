@@ -241,7 +241,7 @@ void tmVertex::GetAxialOrGussetCreases(tmCrease*& crease1,
   crease1 = crease2 = 0;
   for (size_t i = 0; i < mCreases.size(); ++i) {
     tmCrease* theCrease = mCreases[i];
-    if (theCrease->IsAxialOrGussetCrease())
+    if (theCrease->IsAxialOrGussetCrease()) {
       if (!crease1)
         crease1 = theCrease;
       else {
@@ -249,6 +249,7 @@ void tmVertex::GetAxialOrGussetCreases(tmCrease*& crease1,
         crease2 = theCrease;
         return;
       }
+    }
   }
   TMFAIL("tmVertex::GetAxialOrGussetCreases(): "\
     "couldn't find axial or gusset creases");
