@@ -105,7 +105,7 @@ bool wn_gp_fill_flag=FALSE,
      wn_gp_trap_address_flag=FALSE;
 ptr wn_gp_trap_address_address;
 
-ptr wn_system_alloc(/*size*/);
+ptr wn_system_alloc(int size);
 
 local void default_error_func(int size);
 typedef void (*voidfunc)(int size);
