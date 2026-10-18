@@ -29,7 +29,7 @@ Copyright:    ©2003 Robert J. Lang. All Rights Reserved.
 #include "tmArray.h"
 #include "tmArrayIterator.h"
 #include "tmCondition.h"
-#include "tmTreeCleaner.h"
+#include "tmTreeCleaner.h"  // [origami-lab] complete type for template bodies (clang)
 
 
 /**********

@@ -78,7 +78,7 @@ AUTHOR:
 #endif
 /*[\RJL]*/
 
-#include <stdlib.h>
+#include <stdlib.h>  /* [origami-lab] was <malloc.h>, absent on macOS */
 #include <string.h>
 
 #include "wnlib.h"
